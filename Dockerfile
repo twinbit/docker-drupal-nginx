@@ -2,8 +2,6 @@ FROM ubuntu:14.04
 
 MAINTAINER "Paolo Mainardi" <paolo@twinbit.it>
 
-WORKDIR /tmp
-
 # Install Nginx
 RUN apt-get update -y && \
     apt-get install -y nginx
@@ -20,6 +18,11 @@ RUN chmod u=rwx /opt/bin/nginx-start.sh
 
 # PORTS
 EXPOSE 80 443
+
+# Create folders and expose data volume.
+RUN mkdir -p /data/var/www && chown -R www-data:www-data /data/var/www
+RUN mkdir -p /data/var/log/nginx
+VOLUME /data
 
 WORKDIR /opt/bin
 ENTRYPOINT ["/opt/bin/nginx-start.sh"]
