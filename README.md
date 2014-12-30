@@ -1,4 +1,4 @@
-![Drocker](https://raw.githubusercontent.com/twinbit/drupal-docker-env/master/src/dde.png)
+![Drocker](https://raw.githubusercontent.com/twinbit/drocker/gh-pages/img/logo.png)
 
 
 
