@@ -4,7 +4,8 @@ MAINTAINER "Paolo Mainardi" <paolo@twinbit.it>
 
 # Install Nginx
 RUN apt-get update -y && \
-    apt-get install -y nginx bindfs
+    apt-get install -y nginx bindfs && \
+    rm -rf /var/lib/apt/lists/*
 
 # Apply Nginx configuration
 ADD conf/nginx.conf /opt/etc/nginx.conf
