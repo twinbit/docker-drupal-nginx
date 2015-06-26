@@ -1,4 +1,3 @@
-![Drocker](https://raw.githubusercontent.com/twinbit/drocker/gh-pages/img/logo.png)
 
 
 
